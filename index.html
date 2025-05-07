@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="emirveliyevrustem">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rustem4uz-finance-tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='container'>
+        <h1>Finance - Tracker</h1>
+
+        <div class='currency-switcher'>
+            <label>Валюта [Расходы и доходы всегда указываются в долларах]:
+                <select id="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+        </select>
+        </label>
+        </div>
+
+        <div class='columns'>
+            <div class='column' id='income-column'>
+                <h2>Доходы</h2>
+                <ul id='income-list'></ul>
+                <button onclick='addEntry("income")'>+ Добавить доход</button>
+            </div>
+
+        
+                <div class='column' id='expense-column'>
+                    <h2>Расходы</h2>
+                    <ul id='expense-list'></ul>
+                    <button onclick='addEntry("expense")'>+ Добавить расход</button>
+                </div>
+        </div>
+
+        <canvas id='finance-chart'></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
